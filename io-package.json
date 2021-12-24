@@ -1,0 +1,74 @@
+{
+    "common": {
+        "name": "cab",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "CAB Label Printer",
+        "titleLang": {
+            "en": "CAB Label Printer",
+            "de": "CAB Etikettendrucker",
+            "ru": "Принтер этикеток CAB",
+            "pt": "Impressora de etiquetas CAB",
+            "nl": "CAB-labelprinter",
+            "fr": "Imprimante d'étiquettes CAB",
+            "it": "Stampante per etichette CAB",
+            "es": "Impresora de etiquetas CAB",
+            "pl": "Drukarka etykiet CAB",
+            "zh-cn": "CAB 标签打印机"
+        },
+        "desc": {
+            "en": "Adapter for CAB label printer via OpcUa",
+            "de": "Adapter für CAB-Etikettendrucker über OpcUa",
+            "ru": "Адаптер для принтера этикеток CAB через OpcUa",
+            "pt": "Adaptador para impressora de etiquetas CAB via OpcUa",
+            "nl": "Adapter voor CAB-labelprinter via OpcUa",
+            "fr": "Adaptateur pour imprimante d'étiquettes CAB via OpcUa",
+            "it": "Adattatore per stampante di etichette CAB tramite OpcUa",
+            "es": "Adaptador para impresora de etiquetas CAB a través de OpcUa",
+            "pl": "Adapter do drukarki etykiet CAB przez OpcUa",
+            "zh-cn": "通过 OpcUa 的 CAB 标签打印机适配器"
+        },
+        "authors": [
+            "TommyF <post@s-i-a.de>"
+        ],
+        "keywords": [
+            "template"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "build/main.js",
+        "icon": "cab.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/BrummF/ioBroker.cab/master/admin/cab.png",
+        "readme": "https://github.com/BrummF/ioBroker.cab/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "hardware",
+        "compact": true,
+        "materialize": true,
+        "dependencies": [
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": []
+}
