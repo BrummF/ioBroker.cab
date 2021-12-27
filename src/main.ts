@@ -5,6 +5,39 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 import * as utils from '@iobroker/adapter-core';
+import {
+    OPCUAClient,
+    MessageSecurityMode,
+    SecurityPolicy,
+    AttributeIds,
+    makeBrowsePath,
+    ClientSubscription,
+    TimestampsToReturn,
+    MonitoringParametersOptions,
+    ReadValueIdLike,
+    ClientMonitoredItem,
+    DataValue
+} from "node-opcua";
+
+const connectionStrategy = {
+    initialDelay: 1000,
+    maxRetry: 1
+};
+const client = OPCUAClient.create({
+    applicationName: "IoBrokerCabClient",
+    connectionStrategy: connectionStrategy,
+    securityMode: MessageSecurityMode.None,
+    securityPolicy: SecurityPolicy.None,
+    endpointMustExist: false
+});
+//const endpointUrl = "opc.tcp://opcuademo.sterfive.com:26543";
+//const endpointUrl = "opc.tcp://" + require("os").hostname() + ":4334/UA/MyLittleServer";
+const endpointUrl = "opc.tcp://192.168.42.222:4840";
+
+async function timeout(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 
 // Load your modules here, e.g.:
 // import * as fs from "fs";
@@ -44,6 +77,9 @@ class Cab extends utils.Adapter {
      */
     private async onReady(): Promise<void> {
         // Initialize your adapter here
+        // step 1 : connect to
+        await client.connect(endpointUrl);
+        this.log.info('connected !');
 
         // The adapters config (in the instance object everything under the attribute "native") is accessible via
         // this.config:
