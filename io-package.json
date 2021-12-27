@@ -66,8 +66,9 @@
         ]
     },
     "native": {
-        "option1": true,
-        "option2": "42"
+        "IP-Address": "192.168.x.x",
+        "User": "opcuser",
+        "Password":  "opcuser"
     },
     "objects": [],
     "instanceObjects": []
