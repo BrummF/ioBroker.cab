@@ -45,7 +45,7 @@
     "typescript": "^4.5.4",
     "node-opcua": "^2.62.7"
   },
-  "main": "build/main.js",
+  "main": "src/main.js",
   "scripts": {
     "prebuild": "rimraf ./build",
     "build:ts": "tsc -p tsconfig.build.json",
